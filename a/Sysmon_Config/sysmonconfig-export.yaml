@@ -1,0 +1,36 @@
+# Sysmon Configuration
+
+This folder contains the `sysmonconfig-export.xml` file used to configure Microsoft Sysmon (System Monitor) for enhanced Windows event logging and threat detection.
+
+## 🔧 What Is Sysmon?
+
+[Sysmon](https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon) is a Windows system service and device driver that logs system activity to the Windows Event Log. It provides detailed information about process creations, network connections, file time changes, and more.
+
+## 📄 File Included
+
+- **sysmonconfig-export.xml**: The configuration file used when installing Sysmon. This file defines which events Sysmon collects and how.
+
+## ⚙️ How I Used It
+
+As part of my cybersecurity lab:
+- I installed Sysmon on a Windows VM using this config file.
+- Collected detailed Windows event logs to monitor:
+  - Process creations
+  - Network connections
+  - Image loads
+  - Registry changes
+- Forwarded these logs using Winlogbeat to Logstash and visualized them in Splunk.
+
+## 🧠 Key Learning Outcomes
+
+- Understood the importance of granular log collection for incident detection.
+- Gained experience customizing and deploying Sysmon configurations.
+- Mapped event IDs from Sysmon to the MITRE ATT&CK framework.
+
+## 🗒️ Reference
+
+This configuration is based on SwiftOnSecurity’s recommended Sysmon configuration:
+> https://github.com/SwiftOnSecurity/sysmon-config
+
+---
+
